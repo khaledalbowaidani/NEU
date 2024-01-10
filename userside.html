@@ -9,39 +9,118 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <style>
     /* Custom CSS for the page */
-    html,body {
-      font-family: 'Roboto', sans-serif;
-      min-height: 100vh;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: bold;
-    }
-
-    footer ul {
-      list-style-type: none;
+    /* Reset and Global Styles */
+    * {
+      margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-
-    footer ul li {
-      font-size: 16px;
-      margin-bottom: 10px;
+  
+    /* Global Typography */
+    body {
+      font-family: 'Roboto', sans-serif;
       line-height: 1.6;
     }
-
-    footer ul li i {
-      margin-right: 10px;
+  
+    /* Header Styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to left, #8d2342, #495057);
+      color: #fff;
+      padding: 1rem;
     }
+  
+    header img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Main Section Styling */
+    main.container {
+      margin-top: 3rem;
+    }
+  
+    /* Chat Area Styling */
+    .col-md-6 {
+      background-color: #fff;
+      border: 1px solid #e1e1e1;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s;
+    }
+  
+    .col-md-6:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-tabs {
+      border-bottom: 2px solid #8d2342;
+    }
+  
+    .nav-tabs .nav-link {
+      color: #495057;
+    }
+  
+    .nav-tabs .nav-link.active {
+      background-color: #8d2342;
+      color: #ffffff;
+    }
+  
+    /* Footer Styling */
+    footer {
+      background: linear-gradient(to left, #8d2342, #495057);
+      color: #fff;
+      margin-top: 3rem;
+      padding: 2rem 0;
+    }
+  
+    footer img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    footer p {
+      font-size: 14px;
+    }
+  
+    /* Contact Us and Services Styling */
+    .col-md-4 p.footer-heading {
+      font-weight: bold;
+    }
+  
+    .col-md-4 ul,
+    .col-md-4 ul li,
+    .col-md-4 ul li i {
+      color: #e1e1e1;
+      list-style: none; /* Remove bullets */
 
-    .footer-heading {
-      font-size: 18px;
+    }
+  
+    /* Button Styling */
+    .btn-primary {
+      background-color: #8d2342;
+      border: 1px solid #8d2342;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+    }
+  
+    .btn-primary:hover {
+      background-color: #495057;
+      border-color: #495057;
+      transform: scale(1.05);
     }
   </style>
+  
 </head>
 <body>
 
 <!-- Header Row -->
-<header class="container-fluid text-white" style="display:flex; background-color: beige;">
+<header class="container-fluid text-white">
   <div class="row">
     <div class="col-md-6">
       <img src="assets/RCAIoT_logo.png" alt="Company Logo" style="width:300px">
@@ -53,6 +132,7 @@
           <!-- <img src="uploads/einstein.jpg" alt="User Photo" style="float: right; width: 80px; height: 80px; border-radius: 50%;"> -->
         </div>
         <div class="col-md-6">
+          <!-- Logged in information -->
           <!-- <p>Logged in as</p>
           <p>Mercel</p> -->
         </div>
@@ -66,14 +146,14 @@
 <main class="container mt-3">
     <div class="row">
       <!-- Sidebar -->
-      <div class="col-md-2" style="background-color:whitesmoke;">
+      <div class="col-md-2" >
 
       </div>
   
       <!-- Chat Area -->
       <div class="col-md-6">
 
-
+      <!-- Chat Area Content -->
         <div class="tab-contents" id="classroom-content">
           <!-- Content for Classroom tab -->
           <div class="containerr">
@@ -161,22 +241,26 @@
       </div>
   
       <!-- Instructions -->
-      <div class="col-md-4" style="background-color: white;">
+      <div class="col-md-4">
         <!-- <p>Instructions</p> -->
       </div>
     </div>
   </main>
 
   <!-- Footer Row -->
-  <footer class="container-fluid mt-3" style="background-color: beige;">
+  <footer class="container-fluid mt-3">
     <div class="row">
-      <div class="col-md-4">
+    <!-- Company Logos and Information -->
+    <div class="col-md-4">
+      <!-- Company Logos and Information Section -->
         <p><img src="assets/AIRI_logo.png" alt="company logo" style="width:200px"></p>
         <p><img src="assets/RCAIoT_logo.png" alt="company logo" style="width:300px"></p>
         <p style="font-style: italic; font-size: 14px;">Research Center for AI and IoT<br>
           We Specialize in designing AI-based solutions for smart societies</p>
       </div>
-      <div class="col-md-4">
+    <!-- Contact Us Section -->
+    <div class="col-md-4">
+      <!-- Contact Us Section -->
         <p class="footer-heading" style="font-weight:bold">Contact us</p>
         <ul>
           <li><i class="fas fa-map-marker-alt"></i> Research Center for AI and IoT,<br> AI and Robotics Institute, <br>Near East
@@ -184,7 +268,9 @@
           <li><i class="fas fa-phone"></i> +90 542 852 09 85</li>
         </ul>
       </div>
-      <div class="col-md-4">
+    <!-- Services Section -->
+    <div class="col-md-4">
+      <!-- Services Section -->
         <p class="footer-heading" style="font-weight: bold;">Services</p>
         <ul>
           <li><i class="fas fa-home"></i> Smart Home Solutions</li>
